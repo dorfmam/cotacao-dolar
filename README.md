@@ -1,0 +1,1 @@
+<p> Este código faz uma requisição a uma API para obter a cotação do dólar em relação ao real, exibindo o valor atual, os valores dos últimos 30 dias e, por fim, um gráfico com a variação desses valores. </p>
