@@ -1,6 +1,7 @@
 import requests
 import json
 import matplotlib.pyplot as plt
+from matplotlib.ticker import StrMethodFormatter
 
 cotacoes = requests.get('https://economia.awesomeapi.com.br/json/all')
 cotacoes_dic = cotacoes.json()
@@ -19,6 +20,8 @@ print(f'Maior valor nos últimos 30 dias: {maior_valor_dolar:.2f}')
 
 plt.figure(figsize=(15, 8))
 plt.plot(lista_cotacoes_dolar, marker='o')
+plt.gca().yaxis.set_major_formatter(StrMethodFormatter('{x:.2f}'))
+
 plt.title('Valor do Dólar Nos Últimos 30 Dias')
 plt.grid()
 
